@@ -4,6 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Estudiantes extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('estudiantes_model');
+    }
+
     public function create() {
         $data['page'] = 'registro';
         $this->load->helper('form');
