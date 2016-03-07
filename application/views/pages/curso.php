@@ -17,8 +17,8 @@
         <div class="panel-body">
             <div class="col-lg-12">
                 <?php
-                if (count($usuarios) > 0) {
-                    foreach ($usuarios as $usuario) {
+                if (count($registrados) > 0) {
+                    foreach ($registrados as $registrado) {
                         ?>
                         <?php
                     }

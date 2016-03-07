@@ -7,6 +7,8 @@ class Pages extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('pages_model');
+        $this->load->model('estudiantes_model');
+        $this->load->model('registros_model');
     }
 
     public function index($page = 1) {
@@ -44,7 +46,8 @@ class Pages extends CI_Controller {
         $data['page'] = 'curso';
         $datos = $this->pages_model->get_curso($slug);
         $data['curso'] = $datos->elements[0];
-        $data['usuarios'] = array();
+        $data['registrados'] = $this->registros_model->get_registrados($data['curso']->id);
+        $data['usuarios'] = $this->estudiantes_model->get_estudiantes();
         if (empty($data['curso'])) {
             show_404();
         }

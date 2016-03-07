@@ -22,7 +22,12 @@
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li <?php echo ($page == 'home') ? 'class="active"' : ''; ?>><a href="#">Home</a></li>
+                                <li <?php echo ($page == 'home') ? 'class="active"' : ''; ?>>
+                                    <a href="<?php echo site_url('/'); ?>">Home</a>
+                                </li>
+                                <li <?php echo ($page == 'registro') ? 'class="active"' : ''; ?>>
+                                    <a href="<?php echo site_url('registrar'); ?>">Registrar</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
