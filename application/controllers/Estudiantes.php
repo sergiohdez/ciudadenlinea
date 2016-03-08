@@ -7,6 +7,7 @@ class Estudiantes extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('estudiantes_model');
+        $this->load->model('registros_model');
     }
 
     public function create() {
@@ -45,6 +46,24 @@ class Estudiantes extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('pages/registro');
         $this->load->view('templates/footer', $data);
+    }
+    
+    public function register() {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('estudiantes', 'Estudiantes', 'required', array(
+            'required' => 'Se debe seleccionar al menos un estudiante'
+                )
+        );
+        if ($this->form_validation->run() === FALSE) {
+            $data['error'] = TRUE;
+            $data['msg'] = validation_errors();
+        } else {
+            $data['error'] = FALSE;
+            $data['msg'] = 'Registro de estudiante exitoso';
+            $this->registros_model->set_registro();
+        }
+        echo json_encode($data);
     }
 
 }

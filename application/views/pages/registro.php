@@ -24,7 +24,7 @@
             <?php
         }
         ?>
-        <?php echo form_open('registrar'); ?>
+        <?php echo form_open('estudiantes/create'); ?>
         <div class="form-group <?php echo (form_error('nombres')!=='')? 'has-error':''; ?>">
                 <label for="nombres">Nombres</label>
                 <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres" maxlength="50" value="<?php echo set_value('nombres'); ?>">

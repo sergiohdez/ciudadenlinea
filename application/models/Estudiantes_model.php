@@ -18,6 +18,28 @@ class Estudiantes_model extends CI_Model {
         return $query->row_array();
     }
 
+    public function get_estudiantes_registrados($id = FALSE) {
+        if ($id === FALSE) {
+            return array();
+        }
+        $this->db->select('id_estudiante')->from('registro')->where('id_curso', $id);
+        $subQuery = $this->db->get_compiled_select();
+        $this->db->from('estudiante')->where("id IN ($subQuery)", NULL, FALSE);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function get_estudiantes_disponibles($id = FALSE) {
+        if ($id === FALSE) {
+            return array();
+        }
+        $this->db->select('id_estudiante')->from('registro')->where('id_curso', $id);
+        $subQuery = $this->db->get_compiled_select();
+        $this->db->from('estudiante')->where("id NOT IN ($subQuery)", NULL, FALSE);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     public function set_estudiante() {
         $data = array(
             'nombres' => $this->input->post('nombres'),

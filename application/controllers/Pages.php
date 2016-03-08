@@ -43,11 +43,12 @@ class Pages extends CI_Controller {
     }
 
     public function view($slug = NULL) {
+        $this->load->helper('form');
         $data['page'] = 'curso';
         $datos = $this->pages_model->get_curso($slug);
         $data['curso'] = $datos->elements[0];
-        $data['registrados'] = $this->registros_model->get_registrados($data['curso']->id);
-        $data['usuarios'] = $this->estudiantes_model->get_estudiantes();
+        $data['registrados'] = $this->estudiantes_model->get_estudiantes_registrados($data['curso']->id);
+        $data['usuarios'] = $this->estudiantes_model->get_estudiantes_disponibles($data['curso']->id);
         if (empty($data['curso'])) {
             show_404();
         }

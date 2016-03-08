@@ -26,7 +26,7 @@
                                     <a href="<?php echo site_url('/'); ?>">Home</a>
                                 </li>
                                 <li <?php echo ($page == 'registro') ? 'class="active"' : ''; ?>>
-                                    <a href="<?php echo site_url('registrar'); ?>">Registrar</a>
+                                    <a href="<?php echo site_url('estudiantes/create'); ?>">Registrar</a>
                                 </li>
                             </ul>
                         </div>
