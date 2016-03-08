@@ -39,6 +39,7 @@ class Estudiantes extends CI_Controller {
             $data['msg'] = '';
         } else {
             $data['msg'] = 'Registro de estudiante exitoso';
+            $this->estudiantes_model->set_estudiante();
         }
         $this->load->view('templates/header', $data);
         $this->load->view('pages/registro');

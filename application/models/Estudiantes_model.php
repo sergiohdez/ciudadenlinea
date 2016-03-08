@@ -18,7 +18,7 @@ class Estudiantes_model extends CI_Model {
         return $query->row_array();
     }
 
-    public function set_estudiantes() {
+    public function set_estudiante() {
         $data = array(
             'nombres' => $this->input->post('nombres'),
             'apellidos' => $this->input->post('apellidos'),
