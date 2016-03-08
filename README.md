@@ -20,4 +20,4 @@ Se deberá descargar o clonar el proyecto y realizar los siguientes pasos:
 NOTA: se debe verificar que el apache permita utilizar las directivas de los
       archivos .htaccess
 
-Para acceder al sitio ir a: http://formul.brinkster.net/ciudadenlinea/
+Para acceder a la demo del sitio: http://formul.brinkster.net/ciudadenlinea/
