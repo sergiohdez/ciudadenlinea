@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql9.brinkster.com',
-	'username' => 'formul',
-	'password' => 'lumrof',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'formul',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
