@@ -65,7 +65,7 @@
                         ?>
                     <input type="hidden" id="id_curso" name="id_curso" value="<?php echo $curso->id; ?>" />
                         <div class="form-group">
-                            <select class="form-control" id="estudiantes" name="estudiantes" multiple="multiple">
+                            <select class="form-control" id="estudiantes" name="estudiantes[]" multiple="multiple">
                                 <?php
                                 foreach ($usuarios as $usuario) {
                                     ?>

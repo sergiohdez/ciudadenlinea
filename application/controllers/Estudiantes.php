@@ -51,7 +51,7 @@ class Estudiantes extends CI_Controller {
     public function register() {
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('estudiantes', 'Estudiantes', 'required', array(
+        $this->form_validation->set_rules('estudiantes[]', 'Estudiantes', 'required', array(
             'required' => 'Se debe seleccionar al menos un estudiante'
                 )
         );

@@ -18,11 +18,10 @@ class Registros_model extends CI_Model {
     }
     
     public function set_registro() {
-        $estudiantes = $this->input->post('estudiantes');
-        $v_estudiantes = explode(',', $estudiantes);
+        $estudiantes = $this->input->post('estudiantes[]');
         $curso = $this->input->post('id_curso');
         $data = array();
-        foreach ($v_estudiantes as $estudiante) {
+        foreach ($estudiantes as $estudiante) {
             $data[] = array('id_estudiante' => $estudiante, 'id_curso' => $curso);
         }
         return $this->db->insert_batch('registro', $data);
