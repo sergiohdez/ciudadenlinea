@@ -16,7 +16,7 @@
                 ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><a href="<?php echo site_url("pages/view/" . $curso->slug); ?>"><?php echo $curso->name; ?></a></h3>
+                        <h3 class="panel-title"><a href="<?php echo base_url("pages/view/" . $curso->slug); ?>"><?php echo $curso->name; ?></a></h3>
                     </div>
                     <div class="panel-body">
                         <div class="row">

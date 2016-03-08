@@ -23,10 +23,10 @@
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li <?php echo ($page == 'home') ? 'class="active"' : ''; ?>>
-                                    <a href="<?php echo site_url('/'); ?>">Home</a>
+                                    <a href="<?php echo base_url(); ?>">Home</a>
                                 </li>
                                 <li <?php echo ($page == 'registro') ? 'class="active"' : ''; ?>>
-                                    <a href="<?php echo site_url('estudiantes/create'); ?>">Registrar</a>
+                                    <a href="<?php echo base_url('estudiantes/create'); ?>">Registrar</a>
                                 </li>
                             </ul>
                         </div>

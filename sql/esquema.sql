@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `id_estudiante` int(10) NOT NULL,
   `id_curso` varchar(25) COLLATE utf8_spanish2_ci NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_estudiante` (`id_estudiante`)
+  KEY `id_estudiante` (`id_estudiante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=1 ;
 
 --

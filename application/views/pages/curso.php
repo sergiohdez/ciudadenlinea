@@ -48,7 +48,7 @@
             </div>
             <div class="panel-body">
                 <div class="col-lg-12">
-                    <a class="btn btn-success" href="<?php echo site_url('estudiantes/create'); ?>">Nuevo Usuario</a>
+                    <a class="btn btn-success" href="<?php echo base_url('estudiantes/create'); ?>">Nuevo Usuario</a>
                     <br/>
                     <br/>
                     <div class="alert alert-danger alert-dismissible" role="alert" id="div_error" style="display:none">
@@ -61,7 +61,7 @@
                     </div>
                     <?php
                     if (count($usuarios) > 0) {
-                        echo form_open('estudiantes/register',array('id'=>'frm_registro'));
+                        echo form_open(base_url('estudiantes/register'),array('id'=>'frm_registro'));
                         ?>
                     <input type="hidden" id="id_curso" name="id_curso" value="<?php echo $curso->id; ?>" />
                         <div class="form-group">

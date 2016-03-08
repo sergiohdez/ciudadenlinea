@@ -16,7 +16,7 @@ class Pages extends CI_Controller {
         $data['page'] = 'home';
         $datos = $this->pages_model->get_cursos($page);
         $data['cursos'] = $datos->elements;
-        $config['base_url'] = site_url('cursos/page/');
+        $config['base_url'] = base_url('cursos/page/');
         $config['total_rows'] = $datos->paging->total;
         $config['per_page'] = 20;
         $config['num_links'] = 5;
