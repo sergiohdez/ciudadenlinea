@@ -30,9 +30,10 @@ class Estudiantes extends CI_Controller {
             'required' => 'El campo %s es requerido'
                 )
         );
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email', array(
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[estudiante.email]', array(
             'required' => 'El campo %s es requerido',
-            'valid_email' => 'El %s no es válido'
+            'valid_email' => 'El %s no es válido',
+            'is_unique' => 'Ya existe un estudiante con el mismo email'
                 )
         );
         if ($this->form_validation->run() === FALSE) {
